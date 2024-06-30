@@ -13,6 +13,10 @@ int CalcOcupado(const char* user) {
     return strlen(user);
 }
 
+int CalcEmpty(int max, int ocupado) {
+    return max - ocupado - 1;
+}
+
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
@@ -22,6 +26,7 @@ int main() {
 
     UserInput(user, max);
     int ocupado = CalcOcupado(user);
+    int empty = CalcEmpty(max, ocupado);
 
     return 0;
 }
