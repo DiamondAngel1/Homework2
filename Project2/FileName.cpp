@@ -17,6 +17,12 @@ int CalcEmpty(int max, int ocupado) {
     return max - ocupado - 1;
 }
 
+void Print(int total, int ocupado, int empty) {
+    cout << "Загальна кількість елементів у масиві: " << total << endl;
+    cout << "Зайнято елементів: " << ocupado << endl;
+    cout << "Вільно елементів: " << empty << endl;
+}
+
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
@@ -27,6 +33,7 @@ int main() {
     UserInput(user, max);
     int ocupado = CalcOcupado(user);
     int empty = CalcEmpty(max, ocupado);
+    Print(max, ocupado, empty);
 
     return 0;
 }
