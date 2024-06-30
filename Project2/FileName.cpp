@@ -9,6 +9,10 @@ void UserInput(char* user, int max) {
     cin.getline(user, max);
 }
 
+int CalcOcupado(const char* user) {
+    return strlen(user);
+}
+
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
@@ -17,6 +21,7 @@ int main() {
     char user[max];
 
     UserInput(user, max);
+    int ocupado = CalcOcupado(user);
 
     return 0;
 }
